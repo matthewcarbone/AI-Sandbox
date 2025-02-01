@@ -65,7 +65,7 @@ double gaussian_nuclear(double a, const Vector3d &A,
     Vector3d P = (a * A + b * B) / p;
     double rpc2 = (P - C).squaredNorm();
     double F0 = boys_function(p * rpc2);
-    double pre = -2.0 * M_PI / p;
+    double pre = 2.0 * M_PI / p;
     return pre * exp(-a * b / p * (A - B).squaredNorm()) * F0;
 }
 
